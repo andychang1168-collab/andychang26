@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Image Styling Practice</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f5f5f5;
+    }
+
+    .container {
+      width: 90%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .left-img,
+    .right-img {
+      width: 33%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    /* Left image: rounded corners, no distortion */
+    .left-img {
+      border-radius: 18px;
+    }
+
+    /* Middle image: circle */
+    .middle-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #999;
+    }
+
+    /* Right image: distorted (stretch to fit) */
+    .right-img {
+      object-fit: fill;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img class="left-img" 
+         src="https://picsum.photos/id/1043/600/400" 
+         alt="Left Image">
+
+    <img class="middle-img" 
+         src="https://picsum.photos/id/1015/300/300" 
+         alt="Middle Image">
+
+    <img class="right-img" 
+         src="https://picsum.photos/id/1043/600/400" 
+         alt="Right Image">
+  </div>
+
+</body>
+</html>
